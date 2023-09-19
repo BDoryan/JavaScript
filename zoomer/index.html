@@ -11,13 +11,18 @@
 </head>
 
 <body class="bg-dark text-white">
-    <div class="container py-5">
+    <div class="container py-5 d-flex flex-column gap-3">
         <div class="col-auto">
-            <img src="./assets/img/portrait_femme.jpg" alt="" class="">
+            <img class="border border-2 border-white" id="imageViewer" src="./assets/img/portrait_femme.jpg" alt="" class="">
         </div>
         <div class="col">
-            <canvas id="crapper" width="300" height="300"></canvas>
+            <canvas class="border border-2 border-white" id="crapper" width="300" height="300"></canvas>
         </div>
+        <p>
+            current: <span id="current_x"></span>, <span id="current_y"></span><br/>
+            position: <span id="x"></span>, <span id="y"></span><br/>
+            size: <span id="width"></span>, <span id="height"></span>
+        </p>
     </div>
     <script src="./assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
