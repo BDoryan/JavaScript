@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <h1>Bienvenue sur le jeu du 421</h1>
+                <hr>
+                <h1>Règles du 421</h1>
+
+                <h2>Matériel nécessaire :</h2>
+                <ul>
+                    <li>3 dés à 6 faces</li>
+                    <li>Un gobelet</li>
+                    <li>Des jetons (ou de l'argent fictif) pour parier</li>
+                </ul>
+
+                <h2>But du jeu :</h2>
+                <p>Le but du jeu du 421 est d'obtenir le score le plus élevé possible en lançant les dés et en obtenant
+                    des
+                    combinaisons spécifiques.</p>
+
+                <h2>Règles de base :</h2>
+                <ol>
+                    <li>Le jeu se joue à tour de rôle, dans le sens horaire.</li>
+                    <li>Chaque joueur lance les 3 dés dans le gobelet sans que les autres joueurs puissent voir le
+                        résultat.
+                    </li>
+                    <li>Le joueur peut choisir de relancer les dés jusqu'à trois fois, en gardant les dés de son choix à
+                        chaque
+                        relance.</li>
+                    <li>Les combinaisons de dés et leurs valeurs sont les suivantes :</li>
+                </ol>
+
+                <ul>
+                    <li>421 : obtenir un 4, un 2 et un 1 en un seul lancer vaut 10 points.</li>
+                    <li>Brelan : obtenir trois dés identiques (par exemple, 3-3-3) vaut la somme des dés (18 points pour
+                        trois
+                        3).</li>
+                    <li>1-2-3 : obtenir un 1, un 2 et un 3 en un seul lancer vaut 1 point.</li>
+                    <li>Autres combinaisons : la somme des dés pour toutes les autres combinaisons (par exemple, 4-5-6
+                        vaut 15
+                        points).</li>
+                </ul>
+
+                <h2>Déroulement d'un tour :</h2>
+                <ol>
+                    <li>Le joueur lance les dés.</li>
+                    <li>Il décide s'il souhaite relancer un, deux ou trois dés et les relance.</li>
+                    <li>Il garde ensuite le résultat final.</li>
+                    <li>Le joueur peut alors parier des jetons (ou de l'argent fictif) sur son score ou défier un autre
+                        joueur.
+                    </li>
+                    <li>Si un joueur est défié, il doit essayer de battre le score du joueur actif ou perdre un nombre
+                        convenu
+                        de jetons.</li>
+                    <li>Le jeu continue jusqu'à ce qu'un joueur atteigne un score prédéfini ou que tous les joueurs
+                        aient joué
+                        un nombre de tours égal.</li>
+                </ol>
+
+                <h2>Fin du jeu :</h2>
+                <p>Le jeu se termine lorsque l'un des joueurs atteint un score prédéfini ou lorsque tous les joueurs ont
+                    joué un
+                    nombre de tours convenu à l'avance. Le joueur avec le score le plus élevé à la fin du jeu est
+                    déclaré
+                    vainqueur.</p>
+
+                <p>Amusez-vous bien en jouant au 421 !</p>
+            </div>
+            <div class="col-auto d-flex flex-column my-auto">
+                <div class="d-flex flex-column game-container p-3 bg-white rounded-3 text-dark">
+                    <h1 class="display-2 fw-bold text-dark text-center">Jouer au 421</h1>
+                    <div class="border rounded-3 p-2">
+                        <p class="mb-0 lh-sm text-success">Coup gagné : <span id="win_points">0</span></p>
+                        <p class="mb-0 lh-sm text-danger">Coup perdu : <span id="lose_points">0</span></p>
+                        <p class="mb-0 lh-sm text-primary">Ratio : <span id="ratios_points">0</span></p>
+                    </div>
+                    <canvas class="my-5 bg-dark py-3" id="window_canvas" height="100" width="500"></canvas>
+                    <span id="lose_message" class="text-center display-3 text-danger text-uppercase fw-bold">Tu as perdu !!</span>
+                    <span id="win_message" class="text-center display-3 text-success text-uppercase fw-bold">Tu as gagné !!</span>
+                    <span id="retry_message" class="text-center display-3 text-primary text-uppercase fw-bold">Plus qu'un !</span>
+                    <button id="roll" onclick="roll()" class="btn btn-primary mx-auto">Rejouer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
